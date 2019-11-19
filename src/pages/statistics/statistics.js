@@ -1,8 +1,7 @@
 import React from 'react';
 import {connect} from "react-redux";
 
-
-class CommonLayout extends React.Component {
+class Statistics extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -13,10 +12,11 @@ class CommonLayout extends React.Component {
   render() {
     return (
       <div>
-        <p>home</p>
+        Statistics
       </div>
     );
   }
+
 }
 
 
@@ -25,4 +25,4 @@ const mapStateToProps = (store)=>{
 }
 
 
-export default connect(mapStateToProps) (CommonLayout)
+export default connect(mapStateToProps) (Statistics)

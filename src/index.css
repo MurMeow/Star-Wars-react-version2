@@ -8,6 +8,8 @@ body {
   background-color: #282c34;
   color: white;
   font-size: calc(10px + 2vmin);
+  box-sizing: border-box;
+  padding: 2rem 5rem;
 }
 
 a{

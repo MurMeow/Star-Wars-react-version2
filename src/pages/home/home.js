@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from "react-redux";
 
-class Footer extends React.Component {
+class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,7 +12,7 @@ class Footer extends React.Component {
   render() {
     return (
       <div>
-       footer
+        Home
       </div>
     );
   }
@@ -25,4 +25,4 @@ const mapStateToProps = (store)=>{
 }
 
 
-export default connect(mapStateToProps) (Footer)
+export default connect(mapStateToProps) (Home)
