@@ -1,0 +1,21 @@
+.main__container{
+  width: 100%;
+  min-height: 29rem;
+  box-sizing: border-box;
+  padding: 2rem 2rem;
+.main--content__container{
+  margin: 0 1rem;
+}
+}
+
+@media screen and (max-width: 48.999rem) and (min-width: 21rem){
+  .main__container {
+    padding: 0.5rem 0.5rem;
+  }
+}
+
+@media screen and (max-width: 20.999rem){
+  .main__container {
+    padding: 0.5rem 0.5rem;
+  }
+}

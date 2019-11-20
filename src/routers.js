@@ -1,6 +1,7 @@
 import React, {Fragment} from 'react';
 import { Route, Switch } from "react-router-dom";
-import CommonLayout from './layout/commonLayout/commonLayout';
+// import CommonLayout from './layout/commonLayout/commonLayout';
+import Home from './pages/home/home'
 import Authorization from './pages/authorization/authorization';
 import Blog from './pages/blog/blog'
 import Statistics from './pages/statistics/statistics'
@@ -23,7 +24,7 @@ function Router() {
         <Route exact path="/facts/people/" component={PeopleSW} />
         <Route exact path="/facts/planets/" component={PlanetsSW} />
         <Route exact path="/facts/films/" component={FilmsSW} />
-        <Route exact path="" component={CommonLayout} />
+        <Route exact path="" component={Home} />
       </Switch>
     </Fragment>
   );

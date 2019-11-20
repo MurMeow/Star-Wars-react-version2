@@ -1,0 +1,16 @@
+.menuSubgroups{
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0.5rem 2rem 1rem;
+  background-color: #343b49;
+  list-style-type: none;
+  justify-content: center;
+  li{
+    margin: 0 1rem;
+    border-bottom: 2px solid transparent;
+  }
+  li:hover{
+    border-bottom: 2px solid gold;
+  }
+}

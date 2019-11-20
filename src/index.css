@@ -9,7 +9,7 @@ body {
   color: white;
   font-size: calc(10px + 2vmin);
   box-sizing: border-box;
-  padding: 2rem 5rem;
+  padding: 0;
 }
 
 a{
@@ -20,4 +20,117 @@ a{
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.flex{
+  display: flex;
+}
+
+
+.header__menu--icon-authorization{
+  background-image: url(images/method-draw-image.svg);
+  background-repeat: no-repeat;
+  height: 125px;
+  width: 56px;
+  display: inline-block;
+  background-position: -456px -151px;
+  position: absolute;
+  top: 0;
+  right: 1rem;
+}
+
+.header__menu--icon-logo{
+  background-image: url(images/method-draw-image.svg);
+  background-repeat: no-repeat;
+  height: 111px;
+  width: 216px;
+  display: inline-block;
+  background-position: -238px -151px;
+  position: absolute;
+  top: 0;
+  left: 1rem;
+}
+
+.main--flexibleMenu--arrow,.main--Menu--arrow{
+  background-image: url(images/bootstrap-sprites.png);
+  background-repeat: no-repeat;
+  height: 17px;
+  width: 16px;
+  display: inline-block;
+  background-position: -311px -114px;
+}
+
+
+
+
+
+@media screen and (max-width: 48.999rem) and (min-width: 21rem){
+  .header__menu--icon-authorization{
+    background-image: url(images/authoriz-min.svg);
+    background-repeat: no-repeat;
+    width: 55px;
+    height: 50px;
+    background-position: -11px -4px;
+    background-size: contain;
+    position: absolute;
+    top: -0.2rem;
+    right: 0;
+  }
+
+  .header__menu--icon-logo{
+    background-image: url(images/logo-min.svg);
+    background-repeat: no-repeat;
+    width: 74px;
+    height: 72px;
+    background-position: -1px -4px;
+    background-size: contain;
+    position: absolute;
+    top: -0.5rem;
+    left: 8rem;
+  }
+  .header__menu--icon-hamburger{
+    background-image: url(images/white-menu-icon.png);
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 30px;
+    background-size: contain;
+    position: absolute;
+    top: 0.2rem;
+    left: 1rem;
+  }
+}
+
+@media screen and (max-width: 20.999rem){
+  .header__menu--icon-authorization{
+    background-image: url(images/authoriz-min.svg);
+    background-repeat: no-repeat;
+    width: 55px;
+    height: 50px;
+    background-position: -11px -4px;
+    background-size: contain;
+    position: absolute;
+    top: -0.2rem;
+    right: 0;
+  }
+
+  .header__menu--icon-logo{
+    background-image: url(images/logo-min.svg);
+    background-repeat: no-repeat;
+    width: 74px;
+    height: 72px;
+    background-position: -1px -4px;
+    background-size: contain;
+    position: absolute;
+    top: -0.5rem;
+    left: 8rem;
+  }
+  .header__menu--icon-hamburger{
+    background-image: url(images/white-menu-icon.png);
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 30px;
+    background-size: contain;
+    position: absolute;
+    top: 0.2rem;
+    left: 1rem;
+  }
 }

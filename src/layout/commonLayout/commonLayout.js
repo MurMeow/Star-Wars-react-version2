@@ -1,6 +1,8 @@
 import React from 'react';
 import {connect} from "react-redux";
-import Home from '../../pages/home/home'
+import './style.scss';
+import Routers from '../../routers';
+import FlexibleMenu from '../../components/flexibleMenu/flexibleMenu';
 
 
 class CommonLayout extends React.Component {
@@ -13,8 +15,14 @@ class CommonLayout extends React.Component {
 
   render() {
     return (
-      <main>
-        <Home />
+      <main className="main__container flex">
+        <div className="main--menu__container">
+          <FlexibleMenu />
+        </div>
+        <div className="main--content__container">
+          <Routers />
+        </div>
+
       </main>
     );
   }

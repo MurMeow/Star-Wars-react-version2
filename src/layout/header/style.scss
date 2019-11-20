@@ -1,0 +1,35 @@
+header{
+  width: 100%;
+  background-color: #4f5665;
+  position: sticky;
+  top: 0;
+  .menu{
+    list-style-type: none;
+    margin: 0;
+    padding: 1rem 2rem 0.8rem;
+    justify-content: center;
+    li{
+      margin: 0 1rem;
+      border-bottom: 2px solid transparent;
+    }
+    li:hover{
+      border-bottom: 2px solid gold;
+    }
+  }
+  .menuMain{
+    position: relative;
+  }
+
+}
+
+@media screen and (max-width: 48.999rem) and (min-width: 21rem){
+  .header{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 20.999rem){
+  .header{
+    display: none;
+  }
+}

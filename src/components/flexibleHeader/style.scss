@@ -1,0 +1,28 @@
+.flexibleHeader{
+  position: relative;
+  .header__menu--container{
+    position: relative;
+    background-color: #4f5665;
+    min-height: 2rem;
+    margin-top: 1rem;
+  }
+}
+
+@media screen and  (min-width: 49rem){
+  .flexibleHeader{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 48.999rem) and (min-width: 21rem){
+  .flexibleHeader{
+    display: block;
+  }
+}
+
+@media screen and (max-width: 20.999rem){
+  .flexibleHeader{
+    display: block;
+
+  }
+}

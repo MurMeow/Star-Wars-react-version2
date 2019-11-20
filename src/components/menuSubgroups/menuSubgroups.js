@@ -1,6 +1,7 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
+import './style.scss';
 
 
 class MenuSubgroups extends React.Component {
@@ -13,14 +14,17 @@ class MenuSubgroups extends React.Component {
 
   render() {
     return (
-      <Fragment>
-        <Link to={"/facts/people/"}> people
-        </Link>
-        <Link to={"/facts/planets/"}> planets
-        </Link>
-        <Link to={"/facts/films/"}> films
-        </Link>
-      </Fragment>
+      <ul className="menuSubgroups flex">
+        <li>
+          <Link to={"/facts/people/"}> people </Link>
+        </li>
+        <li>
+          <Link to={"/facts/planets/"}> planets </Link>
+        </li>
+        <li>
+          <Link to={"/facts/films/"}> films </Link>
+        </li>
+      </ul>
     );
   }
 

@@ -1,12 +1,12 @@
 import React ,{Component ,Fragment} from "react";
 import connect from "react-redux/es/connect/connect";
-import './style.scss'
+import '../style.scss'
 
 
 
 
 
- class Nesting extends Component {
+ class Breadcrumbs extends Component {
    constructor(props) {
      super(props);
      this.state = {
@@ -32,4 +32,4 @@ const mapStateToProps = (store)=>{
 }
 
 
-export default connect(mapStateToProps) (Nesting)
+export default connect(mapStateToProps) (Breadcrumbs)
