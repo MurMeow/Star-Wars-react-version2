@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from "react-redux";
 import './style.scss';
+// import auhorization from '../../store/authorization/actions'
 
 class Authorization extends React.Component {
   constructor(props) {
@@ -14,6 +15,11 @@ class Authorization extends React.Component {
     return (
       <div className="authorizationBloc">
         <h2>Authorization</h2>
+        <form>
+          <input type="text" placeholder="nickname"/>
+          <input type="email" placeholder="email"/>
+          <button >enter</button>
+        </form>
       </div>
     );
   }

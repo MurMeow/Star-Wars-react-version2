@@ -4,46 +4,45 @@ import {AUTHORIZATION_REQUEST,
 
 const initialState = {
   authorizationSuccessful: false,
-  loading: true,
+  personalInfo:{
+    nickname: '',
+    email: ''
+  },
+  counterUsers: null,
+  loading: false,
   error: null
 };
 
-export function StarPeople(state = initialState, action){
+export function Authorization(state = initialState, action){
   switch (action.type) {
 
     case AUTHORIZATION_REQUEST : {
-      console.log(state, "--State - REQUEST")
 
-      const newState = {
+         const newState = {
         ...state,
         loading: true,
       };
-      console.log(newState, "--newState - REQUEST")
       return newState
     }
 
     case AUTHORIZATION_SUCCESS : {
-      console.log(state, "--State - SUCCESS")
 
       const newState = {
         ...state,
         authorizationSuccessful: true,
+        personalInfo: action.payload,
         loading: false,
         error: null,
       };
-      console.log(newState, "--newState - SUCCESS")
       return newState
     }
 
     case AUTHORIZATION_ERROR : {
-      console.log(state, "--State - ERROR")
-
       const newState = {
         ...state,
         loading: false,
         error: action.payload
       };
-      console.log(newState, "--newState - ERROR")
       return newState
     }
 

@@ -7,6 +7,7 @@ import {getRoute} from './helper.js'
 
 export const fetchPeople = () => dispatch => async () => {
 
+
   // const route = getRoute('123')
   console.log("вошли в featch");
   dispatch({

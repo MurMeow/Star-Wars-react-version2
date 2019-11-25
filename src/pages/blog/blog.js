@@ -12,7 +12,31 @@ class Blog extends React.Component {
   render() {
     return (
       <div>
-        Blog
+        <h2>Blog</h2>
+        <div>
+          {this.props.Blog.themes.map((key,i)=>{
+            return(
+              <div key={i}>
+                <div className="flex">
+                  <p className="theme--title">{key.title}</p>
+                  <button>read</button>
+                </div>
+
+                {key.comments.map((item,i)=>{
+                  return(
+                    <div key={i}>
+                      <div>{item.text}</div>
+                      <div>{item.author}</div>
+                    </div>
+                  )
+                })
+                }
+
+            </div>
+            )}
+            )}
+        </div>
+        <button>Hew theme</button>
       </div>
     );
   }
