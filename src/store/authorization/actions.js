@@ -1,11 +1,11 @@
 import {AUTHORIZATION_REQUEST,
   AUTHORIZATION_SUCCESS,
-  AUTHORIZATION_ERROR} from './types';
+  AUTHORIZATION_ERROR,
+  OUTIN_SUCCESS} from './types';
 
 
-export const auhorization = (nickname, email, userId, counterUsers) => dispatch => {
+export const checkAuthorization = (nickname, email, userId, counterUsers) => dispatch => {
 
-  console.log("вошли в auhorization");
   dispatch({
     type: AUTHORIZATION_REQUEST
   });
@@ -25,4 +25,21 @@ export const auhorization = (nickname, email, userId, counterUsers) => dispatch 
       payload: "Sorry, failed to log in!"
     })
   }
+};
+
+
+
+export const outIn = () => dispatch => {
+
+  dispatch({
+    type: OUTIN_SUCCESS,
+    payload: {
+      authorizationSuccessful: false,
+      personalInfo:{
+        nickname: '',
+        email: '',
+        userId: ''
+      },
+    }
+  });
 };

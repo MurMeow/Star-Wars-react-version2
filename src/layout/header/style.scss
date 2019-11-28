@@ -3,6 +3,7 @@ header{
   background-color: #4f5665;
   position: sticky;
   top: 0;
+  z-index: 2;
   .menu{
     list-style-type: none;
     margin: 0;
@@ -20,7 +21,22 @@ header{
     position: relative;
   }
 
+  .header__outIn--block{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    text-align: end;
+    .header__menu--icon-iGoOut{
+
+    }
+    .header__menu__nickname{
+      margin-top: 0.3rem;
+    }
+  }
+
 }
+
+
 
 @media screen and (max-width: 48.999rem) and (min-width: 21rem){
   .header{
@@ -33,3 +49,6 @@ header{
     display: none;
   }
 }
+
+
+

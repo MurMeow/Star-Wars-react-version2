@@ -1,3 +1,7 @@
+/*fonts--->*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -37,6 +41,15 @@ code {
   top: 0;
   right: 1rem;
 }
+.header__menu--icon-iGoOut{
+   background-image: url(images/iGoOut3.svg);
+   background-repeat: no-repeat;
+  height: 45px;
+  width: 48px;
+  display: inline-block;
+  background-position: 1px -2px;
+  background-size: contain;
+ }
 
 .header__menu--icon-logo{
   background-image: url(images/method-draw-image.svg);
@@ -59,9 +72,78 @@ code {
   background-position: -311px -114px;
 }
 
-
-
-
+.films--episod--1{
+  background-image: url(images/episods/Star-Wars_Episode-I-The-Phantom-Menace.jpg);
+  background-repeat: no-repeat;
+  height: 30rem;
+  width: 277px;
+  display: inline-block;
+  background-position: 0px 0px;
+  background-size: contain;
+}
+.films--episod--2{
+  background-image: url(images/episods/Star-Wars_Episode-II-attackoftheclones.jpg);
+  background-repeat: no-repeat;
+  height: 30rem;
+  width: 277px;
+  display: inline-block;
+  background-position: 0px 0px;
+  background-size: contain;
+}
+.films--episod--3{
+  background-image: url(images/episods/Star-Wars_Episode-III-Revenge-of-the-Sith.jpg);
+  background-repeat: no-repeat;
+  height: 30rem;
+  width: 277px;
+  display: inline-block;
+  background-position: 0px 0px;
+  background-size: contain;
+}
+.films--episod--4{
+  background-image: url(images/episods/Star-Wars-4.jpg);
+  background-repeat: no-repeat;
+  height: 30rem;
+  width: 277px;
+  display: inline-block;
+  background-position: 0px 0px;
+  background-size: contain;
+}
+.films--episod--5{
+  background-image: url(images/episods/Star-Wars_3A-Episode-V-The-Empire-Strikes.jpg);
+  background-repeat: no-repeat;
+  height: 30rem;
+  width: 277px;
+  display: inline-block;
+  background-position: 10px -26px;
+  background-size: contain;
+}
+.films--episod--6{
+  background-image: url(images/episods/Star-Wars_3A-Episode-VI-Return-of-the-Jedi.jpg);
+  background-repeat: no-repeat;
+  height: 30rem;
+  width: 277px;
+  display: inline-block;
+  background-position: 0px 0px;
+  background-size: contain;
+}
+.films--episod--7{
+  background-image: url(images/episods/Star-Wars_3A-Episode-VII-The-Force-Awakens.jpg);
+  background-repeat: no-repeat;
+  height: 30rem;
+  width: 277px;
+  display: inline-block;
+  background-position: 0px -44px;
+  background-size: contain;
+}
+.films--episod--8{
+  background-image: url(images/episods/Star-Wars_3A-Episode-VIII-The-Last-Jedi.jpg);
+  background-repeat: no-repeat;
+  height: 30rem;
+  width: 277px;
+  display: inline-block;
+  background-position: 0px 0px;
+  background-size: contain;
+}
 
 @media screen and (max-width: 48.999rem) and (min-width: 21rem){
   .header__menu--icon-authorization{
@@ -74,6 +156,15 @@ code {
     position: absolute;
     top: -0.2rem;
     right: 0;
+  }
+  .header__menu--icon-iGoOut{
+    background-image: url(images/iGoOut3.svg);
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 29px;
+    display: inline-block;
+    background-position: 1px -2px;
+    background-size: contain;
   }
 
   .header__menu--icon-logo{
@@ -111,6 +202,15 @@ code {
     top: -0.2rem;
     right: 0;
   }
+  .header__menu--icon-iGoOut{
+    background-image: url(images/iGoOut3.svg);
+    background-repeat: no-repeat;
+    height: 20px;
+    width: 22px;
+    display: inline-block;
+    background-position: 1px -2px;
+    background-size: contain;
+  }
 
   .header__menu--icon-logo{
     background-image: url(images/logo-min.svg);
@@ -134,3 +234,5 @@ code {
     left: 1rem;
   }
 }
+
+

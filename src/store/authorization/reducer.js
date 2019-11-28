@@ -1,14 +1,16 @@
 import {AUTHORIZATION_REQUEST,
   AUTHORIZATION_SUCCESS,
-  AUTHORIZATION_ERROR} from './types';
+  AUTHORIZATION_ERROR,
+  OUTIN_SUCCESS} from './types';
 
 const initialState = {
   authorizationSuccessful: false,
   personalInfo:{
     nickname: '',
-    email: ''
+    email: '',
+    userId: ''
   },
-  counterUsers: null,
+  counterUsers: 0,
   loading: false,
   error: null
 };
@@ -30,7 +32,12 @@ export function Authorization(state = initialState, action){
       const newState = {
         ...state,
         authorizationSuccessful: true,
-        personalInfo: action.payload,
+        counterUsers: action.payload.counterUsers,
+        personalInfo: {
+          nickname: action.payload.nickname,
+          email: action.payload.email,
+          userId: action.payload.userId
+        },
         loading: false,
         error: null,
       };
@@ -42,6 +49,22 @@ export function Authorization(state = initialState, action){
         ...state,
         loading: false,
         error: action.payload
+      };
+      return newState
+    }
+
+    case OUTIN_SUCCESS : {
+
+      const newState = {
+        ...state,
+        authorizationSuccessful: action.payload.authorizationSuccessful,
+        personalInfo: {
+          nickname: action.payload.nickname,
+          email: action.payload.email,
+          userId: action.payload.userId
+        },
+        loading: false,
+        error: null,
       };
       return newState
     }

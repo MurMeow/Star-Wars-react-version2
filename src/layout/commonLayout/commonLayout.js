@@ -19,7 +19,7 @@ class CommonLayout extends React.Component {
         <div className="main--menu__container">
           <FlexibleMenu />
         </div>
-        <div className="main--content__container">
+        <div className="main--content__container zoomIn">
           <Routers />
         </div>
 

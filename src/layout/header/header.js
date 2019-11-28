@@ -4,13 +4,16 @@ import {connect} from "react-redux";
 import './style.scss';
 import  MenuSubgroups from '../../components/menuSubgroups/menuSubgroups';
 import FlexibleHeader from '../../components/flexibleHeader/flexibleHeader';
-import isOpenFacts from '../../store/facts/actions';
-import { bindActionCreators } from 'redux'
-
+// import { bindActionCreators } from 'redux';
+import {outIn} from  '../../store/authorization/actions';
 
 
 class Header extends React.Component {
 
+
+  outIn = () => {
+    this.props.outIn()
+  };
 
   render() {
 console.log(this.props)
@@ -26,7 +29,7 @@ console.log(this.props)
                 <Link to={""}> Home </Link>
               </li>
               <li>
-                <Link to={"/facts/"} onClick={isOpenFacts}> Facts
+                <Link to={"/facts/"} > Facts
                   <div className="main--Menu--arrow"></div>
                 </Link>
               </li>
@@ -37,9 +40,20 @@ console.log(this.props)
                 <Link to={"/statistics/"}> Statistics </Link>
               </li>
             </ul>
-            <Link to={"/authorization/"}>
-              <div  className="header__menu--icon-authorization"></div>
-            </Link>
+            {this.props.Authorization.authorizationSuccessful?
+                <div className="header__outIn--block">
+                  <Link to={"/authorization/"}>
+                   <div className="header__menu--icon-iGoOut" onClick={this.outIn}></div>
+                  </Link>
+                  <div className="header__menu__nickname">{this.props.Authorization.personalInfo.nickname}</div>
+                </div>
+              :
+              <Link to={"/authorization/"}>
+                <div  className="header__menu--icon-authorization"></div>
+              </Link>
+            }
+
+
           </div>
           <MenuSubgroups />
         </div>
@@ -56,9 +70,9 @@ const mapStateToProps = (store)=>{
   return store
 };
 
-const mapDispatchToProps = (dispatch) => bindActionCreators({
-  isOpenFacts
-}, dispatch);
+// const mapDispatchToProps = (dispatch) => bindActionCreators({
+//   isOpenFacts
+// }, dispatch);
 
 
-export default connect(mapStateToProps, mapDispatchToProps) (Header)
+export default connect(mapStateToProps, {outIn}) (Header)
