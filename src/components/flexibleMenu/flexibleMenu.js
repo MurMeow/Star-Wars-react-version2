@@ -3,7 +3,7 @@ import {connect} from "react-redux";
 import './style.scss';
 import { bindActionCreators } from 'redux'
 import {Link} from "react-router-dom";
-import isOpenFacts from "../../store/facts/actions";
+import {isOpenFacts} from "../../store/facts/actions";
 
 
 

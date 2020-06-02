@@ -1,4 +1,4 @@
-import {ADD_THEME_REQUEST,  ADD_THEME_SUCCESS,  ADD_THEME_ERROR,
+import {ADD_THEME_REQUEST,  ADD_THEME_SUCCESS,  ADD_THEME_ERROR, OPEN_THEMES, CLOSE_THEMES
         // ADD_COMMIT_REQUEST,  ADD_COMMIT_SUCCESS,  ADD_COMMIT_ERROR
 } from './types';
 
@@ -6,6 +6,7 @@ const initialState = {
   themes: [
     {
       title: 'Favorite hero',
+      isOpen: 'false',
       idTheme: 'theme/1',
       author: 'starUser',
       idAuthor: 'user/1',
@@ -30,6 +31,7 @@ const initialState = {
     },
     {
       title: 'Favorite film',
+      isOpen: 'true',
       idTheme: 'theme/2',
       author: 'starHero',
       idAuthor: 'user/2',
@@ -56,6 +58,14 @@ const initialState = {
 export function Blog(state = initialState, action,){
   switch (action.type) {
 
+    case OPEN_THEMES : {
+      const newState = {
+        ...state,
+       state: {isOpen : action.payload.isOpen}
+      };
+      return newState
+    }
+
     case ADD_THEME_REQUEST : {
       const newState = {
         ...state,
@@ -63,6 +73,8 @@ export function Blog(state = initialState, action,){
       };
       return newState
     }
+
+
 
     case ADD_THEME_SUCCESS : {
 

@@ -6,6 +6,7 @@ import  MenuSubgroups from '../../components/menuSubgroups/menuSubgroups';
 import FlexibleHeader from '../../components/flexibleHeader/flexibleHeader';
 // import { bindActionCreators } from 'redux';
 import {outIn} from  '../../store/authorization/actions';
+import {isOpenFacts} from '../../store/facts/actions';
 
 
 class Header extends React.Component {
@@ -14,9 +15,13 @@ class Header extends React.Component {
   outIn = () => {
     this.props.outIn()
   };
+  isOpenFacts = () =>{
+    this.props.isOpenFacts()
+  }
+
 
   render() {
-console.log(this.props)
+    console.log(this.props)
     return (
       <header>
         <div className="header">
@@ -29,7 +34,7 @@ console.log(this.props)
                 <Link to={""}> Home </Link>
               </li>
               <li>
-                <Link to={"/facts/"} > Facts
+                <Link to={"/facts/films/"} onClick={this.isOpenFacts}> Facts
                   <div className="main--Menu--arrow"></div>
                 </Link>
               </li>
@@ -75,4 +80,4 @@ const mapStateToProps = (store)=>{
 // }, dispatch);
 
 
-export default connect(mapStateToProps, {outIn}) (Header)
+export default connect(mapStateToProps, {outIn,isOpenFacts}) (Header)

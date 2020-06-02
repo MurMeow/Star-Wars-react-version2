@@ -1,4 +1,4 @@
-const BASE_PATH = 'https://swapi.co/api/';
+const BASE_PATH = 'https://swapi.dev/api/';
 const PEOPLE =  "people/";
 const PLANETS =  "planets/";
 const FILMS =  "films/";

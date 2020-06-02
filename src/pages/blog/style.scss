@@ -1,0 +1,29 @@
+.blog{
+  .title__block {
+    padding: 1rem;
+    border: 1px solid;
+    margin: 0.5rem;
+    box-sizing: border-box;
+    background: #4f5665;
+    .title {
+      justify-content: space-between;
+      .theme--title {
+      }
+    }
+    .comment--block{
+      margin: 0.5rem 0 ;
+      padding: 0.5rem;
+      box-sizing: border-box;
+      border: 1px dashed;
+      background: #282c34;
+      .blog__comment__text{
+        font-size: calc(10px + 1vmin);
+        text-align: start;
+      }
+      .blog__comment__author{
+        font-size: calc(10px + 1vmin);
+        text-align: end;
+      }
+    }
+  }
+}

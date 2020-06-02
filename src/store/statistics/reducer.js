@@ -4,11 +4,7 @@ import {STATISTICS_REQUEST,
 
 const initialState = {
   isOpen: false,
-  relase:{
-    films: '',
-    episode_id: null,
-    year: null
-  },
+  release:[],
   people:{
     name: '',
     counter: null
@@ -50,12 +46,12 @@ export function Statistics(state = initialState, action){
       const newState = {
         ...state,
         isOpen: true,
-        relase: action.payload,
-        people: action.payload,
-        planets: action.payload,
-        starships: action.payload,
-        species: action.payload,
-        vehicles: action.payload,
+        release: action.payload.release,
+        people: action.payload.characters,
+        planets: action.payload.planets,
+        starships: action.payload.starships,
+        species: action.payload.species,
+        vehicles: action.payload.vehicles,
         loading: false,
         error: null,
       };

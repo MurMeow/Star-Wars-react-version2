@@ -3,6 +3,7 @@ import {composeWithDevTools} from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 import {StarPeople} from "./facts/starPeople/reducer";
 import {GeneralInfo} from "./generalInfo/reducer";
+import {receivedData} from "./receivedData/reducer";
 import {Authorization} from "./authorization/reducer";
 import {Facts} from "./facts/reducer";
 import {Blog} from "./blog/reducer";
@@ -11,8 +12,10 @@ import {Films} from "./facts/films/reducer";
 
 
 
+
 const reducers = combineReducers({
   GeneralInfo,
+  receivedData,
   Facts,
   Blog,
   Statistics,

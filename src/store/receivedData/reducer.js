@@ -1,38 +1,39 @@
-import {FETCH_FILMS_REQUEST,
-  FETCH_FILMS_SUCCESS,
-  FETCH_FILMS_ERROR} from './types';
+import {INFO_SW_REQUEST,
+  INFO_SW_SUCCESS,
+  INFO_SW_ERROR} from './types';
 
 const initialState = {
-  films: [],
+  isOpen: false,
+  fetchResults: [],
   loading: false,
-  error: null,
-  count: 0,
+  error: null
 };
 
-export function Films(state = initialState, action){
+export function receivedData (state = initialState, action){
   switch (action.type) {
 
-    case FETCH_FILMS_REQUEST : {
-      const newState = {
+    case INFO_SW_REQUEST : {
+
+         const newState = {
         ...state,
         loading: true,
       };
       return newState
     }
 
-    case FETCH_FILMS_SUCCESS : {
+    case INFO_SW_SUCCESS : {
+
       const newState = {
         ...state,
+        isOpen: true,
+        fetchResults: action.payload.fetchResults,
         loading: false,
         error: null,
-        films: action.payload.films,
-        count: action.payload.count,
-
       };
       return newState
     }
 
-    case FETCH_FILMS_ERROR : {
+    case INFO_SW_ERROR : {
       const newState = {
         ...state,
         loading: false,

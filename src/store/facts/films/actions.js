@@ -9,7 +9,7 @@ export const fetchFilms = () =>  async (dispatch) => {
     type: FETCH_FILMS_REQUEST
   });
   try {
-    const url = 'https://swapi.co/api/films/';
+    const url = 'https://swapi.dev/api/films/';
     const result = await fetch(url);
     const informationReceived = await result.json();
 

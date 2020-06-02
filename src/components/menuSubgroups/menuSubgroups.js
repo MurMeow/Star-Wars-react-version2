@@ -13,19 +13,27 @@ class MenuSubgroups extends React.Component {
 
 
   render() {
-    return (
-      <ul className="menuSubgroups flex">
-        <li>
-          <Link to={"/facts/people/"}> people </Link>
-        </li>
-        <li>
-          <Link to={"/facts/planets/"}> planets </Link>
-        </li>
-        <li>
-          <Link to={"/facts/films/"}> films </Link>
-        </li>
-      </ul>
-    );
+      if(this.props.Facts.isOpen){
+          return(
+              <ul className="menuSubgroups flex">
+                  <li>
+                      <Link to={"/facts/people/"}> people </Link>
+                  </li>
+                  <li>
+                      <Link to={"/facts/planets/"}> planets </Link>
+                  </li>
+                  <li>
+                      <Link to={"/facts/films/"}> films </Link>
+                  </li>
+              </ul>
+          )
+      }else {
+          return (
+              <ul className="menuSubgroups flex">
+              </ul>
+          );
+      }
+
   }
 
 }

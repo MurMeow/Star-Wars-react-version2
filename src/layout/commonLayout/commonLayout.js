@@ -3,6 +3,7 @@ import {connect} from "react-redux";
 import './style.scss';
 import Routers from '../../routers';
 import FlexibleMenu from '../../components/flexibleMenu/flexibleMenu';
+import {dataRequest} from '../../store/receivedData/actions';
 
 
 class CommonLayout extends React.Component {
@@ -12,6 +13,9 @@ class CommonLayout extends React.Component {
     };
   }
 
+  async componentDidMount() {
+    this.props.dataRequest()
+  }
 
   render() {
     return (
@@ -26,6 +30,7 @@ class CommonLayout extends React.Component {
       </main>
     );
   }
+
 }
 
 
@@ -34,4 +39,4 @@ const mapStateToProps = (store)=>{
 }
 
 
-export default connect(mapStateToProps) (CommonLayout)
+export default connect(mapStateToProps, {dataRequest}) (CommonLayout)

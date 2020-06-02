@@ -4,12 +4,16 @@ import './style.scss';
 import { TagCloud } from 'react-tagcloud'
 
 const data = [
-  { value: 'release', count: 25 },
-  { value: 'people', count: 18 },
-  { value: 'planets', count: 38 },
-  { value: 'starships', count: 30 },
-  { value: 'species', count: 28 },
-  { value: 'vehicles', count: 25 }
+  { value: 'release', text: 'release', count: 30 },
+  { value: 'release', text: 'year', count: 22 },
+  { value: 'release', text: 'episode', count: 19 },
+  { value: 'people',  text: 'people', count: 28 },
+  { value: 'people',  text: 'hero', count: 24 },
+  { value: 'planets', text: 'planets', count: 32 },
+  { value: 'starships', text: 'starships', count: 30 },
+  { value: 'species', text: 'species', count: 28 },
+  { value: 'vehicles', text: 'vehicles', count: 31 },
+
   // { value: 'HTML5', count: 33 },
   // { value: 'CSS3', count: 20 },
   // { value: 'Webpack', count: 22 },
@@ -29,7 +33,7 @@ const data = [
 // color as arguments, and returns react component which represents tag
 const customRenderer = (tag, size, color) => (
   <Link to={tag.value}
-    key={tag.value}
+    key={tag.text}
     style={{
       animation: 'blinker 3s linear infinite',
       animationDelay: `${Math.random() * 2}s`,
@@ -41,7 +45,7 @@ const customRenderer = (tag, size, color) => (
       color: 'white',
     }}
   >
-    {tag.value}
+    {tag.text}
   </Link>
 )
 

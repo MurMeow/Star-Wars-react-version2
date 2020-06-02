@@ -15,6 +15,7 @@ import statisticPlanets from './pages/statistics/statisticsPages/planets/planets
 import statisticStarships from './pages/statistics/statisticsPages/starships/starshipsPopular'
 import statisticSpecies from './pages/statistics/statisticsPages/species/speciesPopular'
 import statisticVehicles from './pages/statistics/statisticsPages/vehicles/vehiclesPopular'
+import Error404 from './pages/errors/error404'
 
 
 
@@ -35,6 +36,7 @@ function Router() {
         <Route exact path="/statistics/planets/" component={statisticPlanets} />
         <Route exact path="/statistics/starships/" component={statisticStarships} />
         <Route exact path="/statistics/species/" component={statisticSpecies} />
+        <Route exact path="/error/404/" component={Error404} />
         <Route exact path="/statistics/vehicles/" component={statisticVehicles} />
         <Route exact path="" component={Home} />
       </Switch>

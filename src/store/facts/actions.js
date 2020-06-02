@@ -5,22 +5,18 @@ import {FACTS_REQUEST,
 // import dispatch from 'redux'
 
 
-const isOpenFacts = () => dispatch => {
-  console.log("vow")
+export const isOpenFacts = () => dispatch => {
   dispatch({
-    type: FACTS_REQUEST
-  })
-  try {
-    dispatch({
-      type: FACTS_INFO_SUCCESS,
-    });
-
-  } catch (err) {
-    dispatch({
-      type: FACTS_INFO_ERROR,
-      payload: "error- ???"
-    })
-  }
+    type: FACTS_INFO_SUCCESS
+    // payload: {
+    //   authorizationSuccessful: false,
+    //   personalInfo:{
+    //     nickname: '',
+    //     email: '',
+    //     userId: ''
+    //   },
+    // }
+  });
 }
 
 // const isOpenFacts = () => dispatch =>  {
@@ -30,4 +26,3 @@ const isOpenFacts = () => dispatch => {
 //     });
 // };
 
-export default isOpenFacts

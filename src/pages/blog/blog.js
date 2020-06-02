@@ -1,5 +1,8 @@
 import React from 'react';
 import {connect} from "react-redux";
+import './style.scss';
+import {openThemes} from '../../store/blog/actions'
+
 
 class Blog extends React.Component {
   constructor(props) {
@@ -8,29 +11,41 @@ class Blog extends React.Component {
     };
   }
 
+    openThemes = () => {
+      this.props.openThemes()
+    };
 
   render() {
     return (
-      <div>
+      <div className="blog">
         <h2>Blog</h2>
         <div>
           {this.props.Blog.themes.map((key,i)=>{
             return(
-              <div key={i}>
-                <div className="flex">
+              <div className="title__block" key={i}>
+                <div className="flex title">
                   <p className="theme--title">{key.title}</p>
-                  <button>read</button>
+                  <button onClick={this.openThemes}>read</button>
                 </div>
+                  {/*{key.isOpen==="true"?console.log(key.isOpen + "-true"):console.log(key.isOpen + "- false")}*/}
+                  {key.isOpen==="true"?key.comments.map((item,i)=>{
+                      return(
+                          <div className="comment--block" key={i}>
+                              <div className="blog__comment__text">{item.text}</div>
+                              <div className="blog__comment__author">{item.author}</div>
+                          </div>
+                      )
+                  }):console.log(key.isOpen + " - false")}
+                {/*{key.comments.map((item,i)=>{*/}
+                {/*        return(*/}
+                {/*            <div className="comment--block" key={i}>*/}
+                {/*                <div className="blog__comment__text">{item.text}</div>*/}
+                {/*                <div className="blog__comment__author">{item.author}</div>*/}
+                {/*            </div>*/}
+                {/*        )*/}
 
-                {key.comments.map((item,i)=>{
-                  return(
-                    <div key={i}>
-                      <div>{item.text}</div>
-                      <div>{item.author}</div>
-                    </div>
-                  )
-                })
-                }
+                {/*})*/}
+                {/*}*/}
 
             </div>
             )}
@@ -44,9 +59,9 @@ class Blog extends React.Component {
 }
 
 
-const mapStateToProps = (store)=>{
+const mapStateToProps = (store) => {
   return store
-}
+};
 
 
-export default connect(mapStateToProps) (Blog)
+export default connect(mapStateToProps, {openThemes}) (Blog)
