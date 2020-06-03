@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+React + Redux + API swapi.dev + react-chartjs-2 + react-tagcloud + routing
+You can see some interesting information about Star Wars. 
+Shows information about all the films in the facts / films section. Charts reflect film's information.
+
 ## Available Scripts
 
 In the project directory, you can run:

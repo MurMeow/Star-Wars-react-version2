@@ -14,7 +14,9 @@ class Footer extends React.Component {
     return (
       <footer>
         <div className="rollIn">
-          footer
+					<a href="https://en.wikipedia.org/wiki/Star_Wars" target="_blank" rel="noopener noreferrer">
+						Did you know that?
+					</a>
         </div>
       </footer>
     );

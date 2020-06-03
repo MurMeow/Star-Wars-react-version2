@@ -15,13 +15,15 @@ class Home extends React.Component {
   render() {
     return (
       <div className="homePage">
-        <p> {this.props.Authorization.personalInfo.nickname} </p>
         <h2> welcome </h2>
         <h3> to us </h3>
-        <Link to={"/error/404/"}>
-       <div>Error404</div>
-        </Link>
-        {/*<ExperementHeader/>*/}
+				<h2> {this.props.Authorization.personalInfo.nickname} </h2>
+				<h3>May the force be with you.</h3>
+				<p> It was a long time ago, in a galaxy far, far away...</p>
+       {/* <Link to={"/error/404/"}>*/}
+       {/*<div>Error404</div>*/}
+       {/* </Link>*/}
+       {/* <ExperementHeader/>*/}
       </div>
     );
   }

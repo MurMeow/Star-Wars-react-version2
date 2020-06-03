@@ -14,7 +14,7 @@ export const fetchPeople = () => dispatch => async () => {
     type: FETCH_AMAZING_PEOPLE_REQUEST
   })
   try {
-    const url = 'https://swapi.co/api/people/';
+    const url = 'https://swapi.dev/api/people/';
     const result = await fetch(url);
     dispatch({
       type: FETCH_AMAZING_PEOPLE_SUCCESS, payload: result

@@ -18,7 +18,6 @@ class Statistics extends React.Component {
   }
 
   render() {
-    console.log(this.props)
     return (
       <div>
         <MyCloud />

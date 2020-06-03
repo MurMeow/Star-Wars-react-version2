@@ -24,7 +24,6 @@ export const dataRequest  = ()  => async (dispatch) =>{
           const urlPars = r.url.split('/');
           const group = urlPars[urlPars.length-2];
           arrayGroup.push(group)}));
-        console.log(arrayGroup);
         return responses;
       })
       //на данной итерации мы преобразуем ответы promises, для чтения
@@ -35,7 +34,6 @@ export const dataRequest  = ()  => async (dispatch) =>{
   };
 
   const fetchResults = await fetchAllData(obj);//плучаем результат готовый для чтения
-  console.log(fetchResults);
 
   try {
     dispatch({

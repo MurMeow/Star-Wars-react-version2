@@ -29,17 +29,20 @@ const data = [
 ]
 
 
+
+
 // custom renderer is function which has tag, computed font size and
 // color as arguments, and returns react component which represents tag
 const customRenderer = (tag, size, color) => (
   <Link to={tag.value}
     key={tag.text}
     style={{
+			alignSelf: "center",
       animation: 'blinker 3s linear infinite',
       animationDelay: `${Math.random() * 2}s`,
       fontSize: `${size / 2}em`,
       border: `2px solid ${color}`,
-      margin: '3px',
+      margin: `${Math.random() * 5}rem`,
       padding: '3px',
       display: 'inline-block',
       color: 'white',
@@ -50,7 +53,11 @@ const customRenderer = (tag, size, color) => (
 )
 
 export default () => (
-  <TagCloud tags={data} minSize={1} maxSize={5} renderer={customRenderer} />
+  <TagCloud tags={data} minSize={1} maxSize={5} renderer={customRenderer} style={{
+  	display: "flex",
+		justifyContent: "center",
+		flexDirection: "row",
+		flexWrap: "wrap"}}/>
 )
 
 

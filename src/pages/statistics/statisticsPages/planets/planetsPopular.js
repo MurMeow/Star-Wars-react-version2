@@ -31,12 +31,11 @@ class PeoplePopular extends React.Component {
     };
   }
 
-
   render() {
     return (
       <div className="homePage">
         <h2> planets </h2>
-        <Doughnut data={data} width={400} height={400}/>
+        <Doughnut data={data} width={`39%`} height={`45%`} style={{display: 'block', margin: '0 auto'}}/>
       </div>
     );
   }
